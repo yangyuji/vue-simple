@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>撸一个简单的Vue</title>
+</head>
+<body>
+
+<div id="app">
+    <h1 v-html="title"></h1>
+    <input type="input" v-model="name">
+    <p v-html="name"></p>
+    <button @click="click1">点击</button>
+</div>
+<script src="./src/Vue.js"></script>
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        title: '撸一个简单的Vue',
+        name: 'foo'
+      },
+      methods: {
+        click1() {
+          console.log(this.$data.name)
+        }
+      }
+    })
+</script>
+</body>
+</html>
